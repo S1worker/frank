@@ -1,0 +1,38 @@
+.popup {
+    display: none;
+    position: relative;
+
+    &__close {
+        position: absolute;
+        right: 0;
+        top: 0;
+        background-color: #fff;
+        color: #fff;
+    }
+
+    &__auth {
+        text-align: center;
+
+
+        &-btn {
+            .svg {
+                path{
+                    fill: $color-body;
+                }
+            }
+            &:hover {
+                .svg {
+                    path{
+                        fill: #fff;
+                    }
+                }
+            }
+        }
+    }
+
+    &__header,
+    &__content{
+        text-align: center;
+    }
+
+}

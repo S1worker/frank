@@ -1,0 +1,131 @@
+.blogs {
+    background-color: $background-grey;
+    padding: 110px 0 50px 0;
+    @include media(md) {
+        padding: 40px 0;
+    }
+
+    &__headpanel {
+        @include _flexbox();
+        @include _align-items(center);
+        @include _justify-content(space-between);
+        margin: 0 0 35px 0;
+
+        &-title {
+            margin: 0;
+        }
+
+        a {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 14px;
+            @include _flexbox();
+            @include _align-items(center);
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 24px;
+                height: 16px;
+                background: url('../images/ic_arrow_right_red.svg') center center no-repeat;
+                background-size: contain;
+                margin: 0 0 0 10px;
+                transition: transform .12s linear;
+                will-change: transform;
+            }
+
+            &:hover {
+                &::after {
+                    transform: translateX(4px);
+                }
+            }
+
+
+        }
+
+    }
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+
+        > li {
+            @include _flexbox();
+            padding: 0 15px;
+            width: 33.32%;
+            @include media(xs) {
+                width: 100%;
+                &:not(:last-child){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &-item {
+            display: block;
+            width: 100%;
+
+            &:hover {
+                .blog__list-item--title {
+                    span {
+                        text-decoration: underline;
+                    }
+                }
+                img {
+                    opacity: .75;
+                }
+            }
+
+            &--image {
+                margin: 0 0 25px 0;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: opacity .12s linear;
+                }
+
+            }
+
+            &--title {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 26px;
+                color: #060B13;
+                display: block;
+                margin: 0 0 16px 0;
+
+                @include media(md) {
+                    font-size: 16px;
+                    line-height: 22px;
+                }
+
+                span {
+                    transition:all .12s linear;
+                }
+
+            }
+
+            &--footer {
+                @include _flexbox();
+                @include _align-items(center);
+                @include _justify-content(space-between);
+
+                span {
+                    font-size: 14px;
+                    line-height: 20px;
+                    color: #1D2029;
+                    opacity: 0.5;
+                }
+
+            }
+
+        }
+
+    }
+
+
+
+}

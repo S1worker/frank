@@ -1,0 +1,101 @@
+.footer {
+    background-color: $background-blue;
+    padding: 60px 0;
+    @include media(md){
+        padding: 40px 0;
+    }
+
+    .row {
+        $padd: 12px;
+        @include _flexbox();
+        @include _align-items(center);
+        padding-top: $padd;
+        padding-bottom: $padd;
+        @include media(md){
+            @include _flex-flow(column nowrap);
+        }
+    }
+
+    &__logo {
+        @include media(md){
+            width: 250px;
+            margin: 0 auto;
+        }
+
+        svg, img {
+            max-width: 250px;
+        }
+
+    }
+
+    &__contacts {
+        @include _flexbox();
+        @include _justify-content(space-between);
+        @include _align-items(center);
+        padding: 25px 50px 0 50px;
+        @include media(md){
+            @include _flex-flow(column nowrap);
+            padding: 25px 0px 0 0px;
+        }
+
+        span {
+            color: #fff;
+            font-weight: 700;
+            font-size: 20px;
+            line-height: 22px;
+            @include media(md){
+                display: block;
+                margin: 0 0 30px 0;
+            }
+
+        }
+
+        &-phone {
+            @include _flexbox();
+            @include _flex-flow(column nowrap);
+            @include media(md){
+                margin-bottom: 30px;
+            }
+
+            a {
+                @include _flexbox();
+                @include _align-items(center);
+                font-size: 24px;
+                line-height: 32px;
+                color: $color-green;
+                font-weight: 700;
+                position: relative;
+
+                &::before {
+                    $size: 18px;
+                    content: '';
+                    display: inline-block;
+                    background: url('../images/ic_tel_green.svg') center center no-repeat;
+                    background-size: contain;
+                    width: $size;
+                    height: $size;
+                    margin: 0 15px 0 0;
+                }
+
+            }
+
+        }
+
+        &-sms {
+            @include _flexbox();
+            @include _align-items(center);
+            color: $color-green;
+            font-size: 24px;
+            line-height: 24px;
+
+            svg, img {
+                margin: 0 15px 0 0;
+            }
+
+        }
+
+    }
+
+}
+
+

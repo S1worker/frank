@@ -1,0 +1,24 @@
+.reviews_page {
+
+    &__form {
+        background-color: $background-grey;
+        padding: 90px 0 50px 0;
+        border-top: 1px solid #cacbce;
+        @include media(md) {
+            padding: 40px 0 0px 0;
+        }
+
+        &-title {
+            margin: 0 0 40px 0;
+        }
+
+        &-form {
+            max-width: 700px;
+        }
+
+    }
+
+
+}
+
+

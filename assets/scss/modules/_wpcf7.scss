@@ -1,0 +1,26 @@
+.wpcf7 {
+
+    &-not{
+        &-valid{
+            border-color: $background-red;
+
+            &-tip {
+                font-size: 12px;
+                color: $background-red;
+            }
+        }
+    }
+
+    .screen{
+        &-reader{
+            &-response{
+                display: none !important;
+            }
+        }
+    }
+
+    &-response-output {
+        padding: 0 15px;
+    }
+
+}

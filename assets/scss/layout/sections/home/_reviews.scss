@@ -1,0 +1,97 @@
+.reviews {
+    background-color: $background-grey;
+    border-top: 1px solid #cacbce;
+    border-bottom: 1px solid #cacbce;
+    padding: 90px 0;
+    @include media(md) {
+        padding: 40px 0;
+    }
+
+    &__headpanel {
+        @include _flexbox();
+        @include _align-items(center);
+        @include _justify-content(space-between);
+        margin: 0 0 35px 0;
+
+        &-title {
+            margin: 0;
+        }
+
+        a {
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 14px;
+            @include _flexbox();
+            @include _align-items(center);
+
+            &::after {
+                content: '';
+                display: inline-block;
+                width: 24px;
+                height: 16px;
+                background: url('../images/ic_arrow_right_red.svg') center center no-repeat;
+                background-size: contain;
+                margin: 0 0 0 10px;
+                transition: transform .12s linear;
+                will-change: transform;
+            }
+
+            &:hover {
+                &::after {
+                    transform: translateX(4px);
+                }
+            }
+
+
+        }
+
+    }
+
+    &__list {
+        @include _flexbox();
+        @include _flex-wrap(wrap);
+
+        > li {
+            @include _flexbox();
+            padding: 0 15px;
+            width: 33.32%;
+            @include media(xs) {
+                width: 100%;
+                &:not(:last-child){
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        &-item {
+
+            &--title {
+                font-size: 20px;
+                line-height: 26px;
+                color: #060B13;
+                display: block;
+                margin: 0 0 10px 0;
+            }
+
+            &--date {
+                font-size: 14px;
+                line-height: 20px;
+                color: #1D2029;
+                opacity: 0.5;
+                display: block;
+                margin: 0 0 10px 0;
+            }
+
+            &--text {
+
+            }
+
+
+        }
+
+    }
+
+
+
+}

@@ -1,0 +1,60 @@
+/**
+ * css
+ */
+@import url('../css/plugins/font-awesome.css');
+@import url('../css/plugins/jquery.fancybox.css');
+@import url('../css/plugins/swiper-bundle.css');
+
+
+/**
+ * Variables
+ */
+@import "base/variables";
+
+/**
+ * Mixins
+ */
+@import "base/mixins";
+@import "base/mixins-flexbox";
+@import "base/mixins-media";
+
+/**
+ * Global
+ */
+@import "base/fonts";
+@import "base/normalize";
+@import "base/utilities";
+@import "layout/bootstrap/bootstrap";
+@import "base/base";
+
+/**
+ * Modules
+ */
+@import "modules/btn";
+@import "modules/popup";
+@import "modules/swiper";
+@import "modules/breadcrumbs";
+@import "modules/navigation";
+@import "modules/form";
+@import "modules/wpcf7";
+
+/**
+ * Parts
+ */
+@import "layout/sections/parts/pagehead";
+
+/**
+ * Content
+ */
+@import "layout/header";
+@import "layout/main";
+@import "layout/footer";
+
+/**
+ * Pages
+ */
+@import "pages/home";
+@import "pages/blog";
+@import "pages/gallery";
+@import "pages/reviews";
+@import "pages/post";

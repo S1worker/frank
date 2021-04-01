@@ -1,0 +1,124 @@
+.swiper {
+
+    &-controls {
+
+        .swiper {
+
+            &-button{
+
+                &-prev, &-next {
+
+
+                }
+
+                &-prev {
+
+                }
+
+                &-next {
+
+                }
+
+            }
+
+            &-pagination {
+
+            }
+
+        }
+
+    }
+
+    &-button{
+
+        &-prev, &-next {
+            $size: 60px;
+            width: $size;
+            height: $size;
+            border-radius: 50%;
+            background-color: $background-red;
+            @include _flexbox();
+            @include _align-items(center);
+            @include _justify-content(center);
+            color: #fff;
+            transition: opacity .12s linear;
+
+            &::after {
+                font-family: FontAwesome;
+                font-size: 30px;
+            }
+
+            &:hover {
+                opacity: .7;
+            }
+
+        }
+
+        &-next {
+            right: -75px;
+            @media (max-width: 1480px) {
+                right: 25px;
+            }
+            @include media(xs) {
+                display: none;
+            }
+
+            &::after {
+                content: '\f105';
+            }
+
+        }
+
+        &-prev {
+            left: -75px;
+            @media (max-width: 1480px) {
+                left: 25px;
+            }
+            @include media(xs) {
+                display: none;
+            }
+
+            &::after {
+                content: '\f104';
+            }
+
+        }
+
+    }
+
+    &-pagination{
+
+        &-bullet {
+            $size: 14px;
+            width: $size;
+            height: $size;
+            background-color: #C4C4C4;
+            margin: 0 5px;
+            opacity: 1;
+            transition: all .18s linear;
+
+            &-active{
+                background-color: $color-orange;
+            }
+        }
+    }
+
+    &-container {
+        &-horizontal {
+            > .swiper {
+                &-pagination{
+                    &-bullets{
+                        .swiper{
+                            &-pagination{
+                                &-bullet {
+                                    margin: 0 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,112 @@
+.intro {
+    $left-width: 350px;
+    $left-width-md: 290px;
+    background-color: $background-blue;
+    margin: 0 0 50px 0;
+
+    &__row {
+       @include _flexbox();
+
+        @include media(md) {
+            @include _flex-flow(column nowrap);
+        }
+
+    }
+
+    &__text {
+        padding: 0 20px 0 0px;
+        width: $left-width;
+        padding: 35px 0;
+        @include media(lg) {
+            width: $left-width-md;
+        }
+        @include media(md) {
+            width: 100%;
+            order: 2;
+        }
+
+        * {
+            color: #fff !important;
+            font-weight: 500;
+        }
+
+        ul {
+            font-size: 24px;
+            line-height: 30px;
+            margin: 0 0 0 30px;
+            @include media(lg) {
+                font-size: 16px;
+                line-height: 28px;
+            }
+            @include media(md) {
+                margin: 0;
+                @include _flexbox();
+                @include _flex-wrap(wrap);
+            }
+
+            > li {
+                position: relative;
+                padding: 0 0 0 30px;
+                @include media(md) {
+                    padding: 0 20px 0 20px;
+                }
+
+                &:not(:last-child) {
+                    margin: 0 0 0px 0;
+                }
+
+                &::before {
+                    $size: 8px;
+                    $size-md: 5px;
+                    content: '';
+                    display: block;
+                    width: $size;
+                    height: $size;
+                    border-radius: 50%;
+                    background-color: $color-orange;
+                    left: 0;
+                    position: absolute;
+                    top: 9px;
+                    @include media(lg) {
+                        width: $size-md;
+                        height: $size-md;
+                        top: 11px;
+                    }
+                }
+
+            }
+
+        }
+    }
+
+    &__slider {
+        width: calc(100% - #{$left-width});
+        @include media(lg) {
+            width: calc(100% - #{$left-width-md});
+        }
+        @include media(md) {
+            width: 100%;
+            order: 1;
+        }
+
+        .swiper {
+
+            &-container, &-wrapper, &-slide {
+                height: 100%;
+            }
+
+            &-slide {
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+
+            }
+
+        }
+
+    }
+
+}

@@ -1,0 +1,54 @@
+/**
+ * Classes Buttons
+ *
+ * btn
+ * btn-opacity
+ *
+ */
+
+.btn {
+    @include _flexinline();
+    @include _align-items(center);
+    @include _justify-content(center);
+    font-family: $font-body;
+    font-weight: 600;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-color: $btn-background-color;
+    border: $btn-border-width solid $btn-border-color;
+    color: $btn-color;
+    white-space: nowrap;
+    padding: 0px 32px;
+    height: $btn-height;
+    font-size: $btn-font-size;
+    line-height: 1.42857143;
+    border-radius: $border-radius;
+    user-select: none;
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition:all .12s linear;
+
+    @include media(md) {
+        height: 32px;
+        font-size: 14px;
+        line-height: 14px;
+        padding-right: 27px;
+        padding-left: 27px;
+    }
+
+    &:hover {
+        border-color: $btn-border-color;
+        text-decoration: none;
+        background-color: $btn-border-color;
+        color: #fff;
+    }
+
+    .svg, img {
+        margin: 0 10px 0 0;
+    }
+
+
+}
